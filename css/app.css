@@ -2,22 +2,51 @@
 
     .container{
         max-width: 680px;
-        overflow: auto;
     }
 
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     h3 {
         font-size: 1rem;
     }
 
     .lessons .col img {
         height: 100px;
+    }
+
+    .steps .col img {
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .container{
+        max-width: 400px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .lessons .col{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .steps .col{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .why-us .col-left, .why-us .col-right{
+        width: 100%;
+        margin-bottom: 4rem;
     }
 }
