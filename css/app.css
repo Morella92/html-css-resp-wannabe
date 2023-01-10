@@ -1,12 +1,15 @@
 @media screen and (max-width:1160px) {
     
     .container{
-        max-width: 100%;
+        max-width: 1140px;
+        width: 100%;
+        /*in questo modo si prenderà 
+        sempre il 100% fino ad un massimo di 1140px*/
     }
 }
 
-
-@media screen and (max-width:768px) {
+/* con la soluzione di sopra questa @media è superflua */
+/* @media screen and (max-width:768px) {
 
     .container{
         max-width: 100%;
@@ -41,7 +44,7 @@
         width: 100%;
         margin-bottom: 2rem;
     }
-}
+} */
 
 @media screen and (max-width:480px) {
 
@@ -51,6 +54,7 @@
 
     .row{
         flex-direction: column;
+        /* oppure si poteva dare il wrap */
     }
 
     h1 {
@@ -65,28 +69,27 @@
         font-size: 1.5rem;
     }
 
-    .lessons .col img {
+    .lessons .col img, .steps .col img {
         height: 200px;
     }
 
-    .steps .col img {
-        height: 200px;
-    }
-
-    .lessons .col{
+    .steps .col, .lessons .col{
         width: 100%;
         margin-bottom: 2rem;
+        /* per lo spazio bastava un row-gap */
     }
 
-    .steps .col{
-        width: 100%;
-        margin-bottom: 2rem;
+    .steps{
+        margin-bottom: 0;
     }
 
     .why-us{
         background-color: black;
-        margin: -50px 0;
-        padding-top: 30px;
+        /* margin: -50px 0;
+        padding-top: 30px; 
+        meglio evitare margin negativo e cose che si sovrappongono se non serve*/
+        margin-bottom: 0;
+        padding: 3rem 0;
     }
 
     .why-us .col-left{
